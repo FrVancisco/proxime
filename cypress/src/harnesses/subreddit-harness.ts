@@ -8,13 +8,11 @@ export class SubredditHarness extends ComponentHarness {
     }
 
     private upVote(subredditNumber: number): void {
-        const subredditSelector = this.getSubredditSelector(subredditNumber);
-        subredditSelector.find('[data-event-action="upvote"]').click();
+        this.getSubredditSelector(subredditNumber).find('[data-event-action="upvote"]').click();
     }
 
     private downVote(subredditNumber: number): void {
-        const subredditSelector = this.getSubredditSelector(subredditNumber);
-        subredditSelector.find('[data-event-action="downvote"]').click();
+        this.getSubredditSelector(subredditNumber).find('[data-event-action="downvote"]').click();
     }
 
     private checkForPromotion(subredditNumber: number): Cypress.Chainable<number> {

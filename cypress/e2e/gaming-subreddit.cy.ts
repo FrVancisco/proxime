@@ -9,7 +9,7 @@ import {paths} from "../src/libs/paths";
 describe('gaming subreddit test',() => {
     const subreddit: string = 'gaming';
 
-    it('gives thumbs if second subreddit is about Nintendo, else thumbs down', { includeShadowDom: true }, () => {
+    it('gives thumbs up if second subreddit is about Nintendo, else thumbs down', { includeShadowDom: true }, () => {
         cy.intercept('POST', '**/account/login').as('logIn');
 
         navigate(paths.mainOld);
